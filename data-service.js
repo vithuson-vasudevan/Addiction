@@ -2,15 +2,7 @@ const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
 //set connection
-const sequelize = new Sequelize('d9ad497sjgs06c', 'aythpkykgmwlvk', 'bc704f38ab4e280f3082f1c05ae923dad5c81ae0bca2a4b67dba649d28dcdc46', {
-    host: 'ec2-50-16-196-238.compute-1.amazonaws.com',
-    dialect: 'postgres',
-    port: 5432,
-    dialectOptions : {
-        ssl: true
-    },
-    operatorsAliases: false
-});
+//connection details go here
 
 sequelize.authenticate()
     .then(function() {
