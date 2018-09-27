@@ -5,14 +5,14 @@ const fs = require('fs');
 //twitch requirements
 const TwitchHelix = require("twitch-helix");
 const twitchApi = new TwitchHelix({
-    clientId: "hxoxnt5i6djwebad8sepduukidy0ur",
-    clientSecret: "y1bki5soyth24hlpx8b5c2557vkweq"
+    clientId: //client ID goes here
+    clientSecret: //client Secret goes here
 });
 
 var streams = ["lookatmybody", "DreamingWithKenton", "EaziTV", "Loots24", "ZarrantDK", "Luxuriia", "Azraelius", "GODgatti", "Fuhnkish", "Roosah", "imaqtpie"];
 
 //Blizzard API Key
-const APIkey = 'cq8w49drwjhbb5aqdsne4r6d8f7e5u99';
+const APIkey = //api key goes here
 
 //Region, Locale and Game
 var RegionName = 'us';
