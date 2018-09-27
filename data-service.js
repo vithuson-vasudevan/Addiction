@@ -186,7 +186,7 @@ function reverseObject(object) {
 
     return newObject;
 }
-
+//retrieves raid progress from JSON file
 function getRaidProg() {
     return new Promise(function (resolve, reject) {
         newArray = {};
@@ -202,7 +202,7 @@ function getRaidProg() {
        console.log(newArray);
     });
 }
-
+//retrieves guild ranks from JSON file
 function getGuildRanks() {
     return new Promise(function (resolve, reject) {
         if(ranksArray.length == 0) {
@@ -235,7 +235,8 @@ function getRecruitmentInfo() {
         }
     });
 }
-
+//retrieves stream info from JSON file
+//display offline list and online list when appropriate
 function getStreamsInfo() {
     return new Promise(function (resolve, reject) {
         onlineArray = [];
@@ -264,7 +265,7 @@ function getStreamsInfo() {
         
     });
 }
-
+//retrieves application from database
 function getApplications() {
     return new Promise(function (resolve, reject) {
         Application.findAll({
@@ -281,7 +282,7 @@ function getApplications() {
         });
     });
 }
-
+//creates application and stores in database
 function createApplication(app) {
     return new Promise(function (resolve, reject) {
         sequelize.sync().then(function () {
@@ -474,7 +475,8 @@ function getClassInfo(classId) {
         }
     });
 }
-
+//update if class or specs are recruiting
+//store in JSON file once updated
 function updateClassInfo(classId, classData) {
     return new Promise(function (resolve, reject) {
         id = classId - 1;
