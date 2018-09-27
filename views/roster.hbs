@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="main-content">  
+    <div class="row">
+        {{#groupRow 3 roster}}
+        <div class="col-md-3">
+            {{#each this}}
+            {{#if character.spec}}
+            <div class="card bg-dark text-black text-center mb-3">
+                <img class="card-img class-background" src="images/class-spec-bg/{{#removeSpace character.spec.name}}{{/removeSpace}}-{{character.class}}.jpg">
+                <div class="card-img-overlay">
+                    <h4 class="card-title">{{character.name}}</h4><img class="card-role-icon img-fluid" src="images/{{#toLowerCase character.spec.role}}{{/toLowerCase}}.png">
+                    <h6 class="card-text">{{#rankName rank}}{{/rankName}}</h6>
+                </div>
+            </div>
+            {{/if}}
+            {{/each}}
+        </div>
+         {{/groupRow}}
+    </div>
+  </div>
+</div>

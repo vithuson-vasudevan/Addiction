@@ -1,0 +1,41 @@
+<h4>Applications</h4>
+<div class="accordion" id="accordion">
+  {{#each apps}}
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h6 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{id}}" aria-expanded="true" aria-controls="collapseOne">
+            {{firstname}} {{lastname}} [{{battletag}}/{{email}}]
+        </button>
+        <div class="float-right">Request #{{id}} || <a href="#">Delete</a></div>
+      </h6>
+    </div>
+
+    <div id="collapse{{id}}" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        <hr>
+        <b>Name:</b> {{firstname}}, {{lastname}} <br/>
+        <b>Age:</b> {{age}} <br/>
+        <b>Location:</b> {{state}}, {{city}} <br/>
+        <b>Email:</b> {{email}} <br/>
+        <b>BattleTag:</b> {{battletag}} <br/>
+        <b>Class / Spec:</b> {{class}}, {{spec}} <br/>
+        <b>Armory Link:</b> {{armory}} <br/>
+        <b>Time Played:</b> {{timeplayed}} <br/>
+        <b>Alt Information:</b> {{alt}} <br/>
+        <b>Schedule:</b> {{schedule}} <br/>
+        <b>UI and Keybinds:</b> {{uikeybinds}} <br/>
+        <b>Logs:</b> {{logs}} <br/>
+        <b>Raiding Experience:</b> {{raidingexp}} <br/>
+        <b>References:</b> {{references}} <br/>
+        <b>Previous Guilds:</b> {{previousguilds}} <br/>
+        <b>Reasons for Playing:</b> {{reasons}} <br/>
+        <b>How did you hear about us?:</b> {{about}} <br/>
+        <b>Why should we take you?:</b> {{special}} <br/>
+        <b>Favorite Color:</b> {{color}} <br/>
+        <hr>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>

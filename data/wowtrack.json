@@ -1,0 +1,142 @@
+{
+    "patch": {
+        "name": "Shadows of Argus",
+        "version": "7.3"
+    },
+    "region": "US",
+    "lastUpdated": 1526772119,
+    "raids": [
+        {
+            "bosses": [
+                {
+                    "normalTime": 1511907774,
+                    "id": 122450,
+                    "name": "Garothi Worldbreaker",
+                    "mythicTime": 1512530725,
+                    "heroicTime": 1511925246
+                },
+                {
+                    "normalTime": 1511908349,
+                    "id": 122477,
+                    "name": "Felhounds of Sargeras",
+                    "mythicTime": 1512533750,
+                    "heroicTime": 1511926244
+                },
+                {
+                    "normalTime": 1511909079,
+                    "id": 122367,
+                    "name": "Antoran High Command",
+                    "mythicTime": 1512537505,
+                    "heroicTime": 1511928030
+                },
+                {
+                    "normalTime": 1511909871,
+                    "id": 122104,
+                    "name": "Portal Keeper Hasabel",
+                    "mythicTime": 1512620659,
+                    "heroicTime": 1511929295
+                },
+                {
+                    "normalTime": 1511910499,
+                    "id": 122500,
+                    "name": "Eonar the Life-Binder",
+                    "mythicTime": 1512630862,
+                    "heroicTime": 1511930077
+                },
+                {
+                    "normalTime": 1511911102,
+                    "id": 124158,
+                    "name": "Imonar the Soulhunter",
+                    "mythicTime": 1513227885,
+                    "heroicTime": 1511931641
+                },
+                {
+                    "normalTime": 1511911880,
+                    "id": 122578,
+                    "name": "Kin'garoth",
+                    "mythicTime": 1513318083,
+                    "heroicTime": 1511932949
+                },
+                {
+                    "normalTime": 1511913845,
+                    "id": 122366,
+                    "name": "Varimathras",
+                    "mythicTime": 1513832164,
+                    "heroicTime": 1511935281
+                },
+                {
+                    "normalTime": 1511915304,
+                    "id": 122468,
+                    "name": "The Coven of Shivarra",
+                    "mythicTime": 1513916618,
+                    "heroicTime": 1511938594
+                },
+                {
+                    "normalTime": 1511916082,
+                    "id": 121975,
+                    "name": "Aggramar",
+                    "mythicTime": 1515137973,
+                    "heroicTime": 1512023412
+                },
+                {
+                    "normalTime": 1511917050,
+                    "id": 124828,
+                    "name": "Argus the Unmaker",
+                    "mythicTime": 1519277245,
+                    "heroicTime": 1512025054
+                }
+            ],
+            "name": "Antorus, the Burning Throne",
+            "id": 8638
+        }
+    ],
+    "lastModified": 1526762586,
+    "realm": "Bleeding Hollow",
+    "rankings": [
+        {
+            "connectionRank": 1,
+            "worldRank": 155,
+            "percentile": 1.3,
+            "key": "progression",
+            "localeRank": 48,
+            "regionRank": 50
+        },
+        {
+            "connectionRank": 1,
+            "worldRank": 50,
+            "percentile": 0.1,
+            "key": "averageItemLevel",
+            "localeRank": 7,
+            "regionRank": 7
+        },
+        {
+            "connectionRank": 4,
+            "worldRank": 184,
+            "percentile": 0.2,
+            "key": "achievementPoints",
+            "localeRank": 60,
+            "regionRank": 61
+        },
+        {
+            "key": "pvepower"
+        }
+    ],
+    "connection": "EpnOUx/gAiQJpcaMd9QICZo66VI=",
+    "name": "Addiction",
+    "locale": "en_US",
+    "progression": {
+        "bossTotal": 11,
+        "difficulty": "mythic",
+        "bossCount": 11
+    },
+    "links": [
+        {
+            "uri": "https://wowtrack.org/guilds/US/Bleeding%20Hollow/Addiction?response=data",
+            "rel": "self"
+        },
+        {
+            "uri": "https://wowtrack.org/guilds/US/Bleeding%20Hollow/Addiction",
+            "rel": "canonical"
+        }
+    ]
+}

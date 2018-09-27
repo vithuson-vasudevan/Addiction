@@ -1,0 +1,26 @@
+<h4>Recruitment</h4>
+{{#if err}} 
+  <div class="alert alert-danger">{{err}}</div>
+{{/if}}
+{{#if success}}
+  <div class="alert alert-success">{{success}}</div>
+{{/if}}
+<table class="table table-borderless table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Class</th>
+      <th scope="col" colspan="3">Specs</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each recruitment.class}}
+    <tr>
+      <th scope="row">{{name}}</th>
+      {{#each spec}} 
+      <td>{{@key}}</td>
+      {{/each}}
+      <td class="float-right"><a href="/recruitment/{{id}}"><button type="submit" class="btn btn-primary">Edit</button></a></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

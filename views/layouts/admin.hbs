@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addiction - Backend</title>
+    <link rel="stylesheet" href="../css/bootstrap-backend.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+  <div class="everything">
+      <div class="row">
+      <div class="col-md-3">
+        <div class="left-panel">
+          <ul class="nav flex-column">
+            {{#navLink '/'}} Home Page {{/navLink}}
+            {{#navLink '/dashboard'}} Dashboard {{/navLink}}
+            {{#navLink '/recruitment'}} Class Recruitment {{/navLink}}
+            {{#navLink '/news'}} Post News {{/navLink}}
+            {{#navLink '/gallery'}} Upload Image {{/navLink}}
+            <li class="nav-item video">
+            {{#navLink '/applications'}} Applications <span class="badge badge-primary">1</span> {{/navLink}}
+            {{#navLink '/sales-request'}} Sales Request {{/navLink}}
+            {{#navLink '/sales-items'}} Sales Items {{/navLink}}
+            {{#navLink '/streams'}} Streams {{/navLink}}
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="top-panel">Loggin in as Username</div>
+        {{{body}}}
+        <footer>
+          &copy; 2017 - 2018 Addiction - All Rights Reserved. 
+        </footer>
+      </div>
+    </div>
+    </div>
+  </div>
+</body>
+</html>

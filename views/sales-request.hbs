@@ -1,0 +1,21 @@
+<h4>Sales Request</h4>
+<div class="accordion" id="accordion">
+  {{#each request}}
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h6 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{id}}" aria-expanded="true" aria-controls="collapseOne">
+            {{username}} [{{email}}]
+        </button>
+        <div class="float-right">App #{{id}} || <a href="/sales-request/delete/{{id}}">Delete</a></div>
+      </h6>
+    </div>
+
+    <div id="collapse{{id}}" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        {{message}}
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>

@@ -1,0 +1,155 @@
+{
+    "name": "Addiction",
+    "faction": "horde",
+    "region": "us",
+    "realm": "Bleeding Hollow",
+    "profile_url": "https://raider.io/guilds/us/bleeding-hollow/Addiction",
+    "raid_rankings": {
+        "antorus-the-burning-throne": {
+            "normal": {
+                "world": 111,
+                "region": 111,
+                "realm": 2
+            },
+            "heroic": {
+                "world": 140,
+                "region": 99,
+                "realm": 2
+            },
+            "mythic": {
+                "world": 109,
+                "region": 30,
+                "realm": 1
+            }
+        },
+        "the-emerald-nightmare": {
+            "normal": {
+                "world": 144,
+                "region": 51,
+                "realm": 2
+            },
+            "heroic": {
+                "world": 2309,
+                "region": 913,
+                "realm": 21
+            },
+            "mythic": {
+                "world": 296,
+                "region": 91,
+                "realm": 2
+            }
+        },
+        "the-nighthold": {
+            "normal": {
+                "world": 2328,
+                "region": 1298,
+                "realm": 37
+            },
+            "heroic": {
+                "world": 72,
+                "region": 53,
+                "realm": 1
+            },
+            "mythic": {
+                "world": 147,
+                "region": 45,
+                "realm": 1
+            }
+        },
+        "tomb-of-sargeras": {
+            "normal": {
+                "world": 4040,
+                "region": 1696,
+                "realm": 45
+            },
+            "heroic": {
+                "world": 472,
+                "region": 176,
+                "realm": 4
+            },
+            "mythic": {
+                "world": 96,
+                "region": 30,
+                "realm": 1
+            }
+        },
+        "trial-of-valor": {
+            "normal": {
+                "world": 760,
+                "region": 274,
+                "realm": 9
+            },
+            "heroic": {
+                "world": 3788,
+                "region": 1881,
+                "realm": 53
+            },
+            "mythic": {
+                "world": 97,
+                "region": 29,
+                "realm": 1
+            }
+        },
+        "uldir": {
+            "normal": {
+                "world": 4478,
+                "region": 1816,
+                "realm": 51
+            },
+            "heroic": {
+                "world": 309,
+                "region": 124,
+                "realm": 3
+            },
+            "mythic": {
+                "world": 168,
+                "region": 46,
+                "realm": 1
+            }
+        }
+    },
+    "raid_progression": {
+        "antorus-the-burning-throne": {
+            "summary": "11/11 M",
+            "total_bosses": 11,
+            "normal_bosses_killed": 11,
+            "heroic_bosses_killed": 11,
+            "mythic_bosses_killed": 11
+        },
+        "the-emerald-nightmare": {
+            "summary": "7/7 M",
+            "total_bosses": 7,
+            "normal_bosses_killed": 7,
+            "heroic_bosses_killed": 7,
+            "mythic_bosses_killed": 7
+        },
+        "the-nighthold": {
+            "summary": "10/10 M",
+            "total_bosses": 10,
+            "normal_bosses_killed": 10,
+            "heroic_bosses_killed": 10,
+            "mythic_bosses_killed": 10
+        },
+        "tomb-of-sargeras": {
+            "summary": "9/9 M",
+            "total_bosses": 9,
+            "normal_bosses_killed": 9,
+            "heroic_bosses_killed": 9,
+            "mythic_bosses_killed": 9
+        },
+        "trial-of-valor": {
+            "summary": "3/3 M",
+            "total_bosses": 3,
+            "normal_bosses_killed": 3,
+            "heroic_bosses_killed": 3,
+            "mythic_bosses_killed": 3
+        },
+        "uldir": {
+            "summary": "3/8 M",
+            "total_bosses": 8,
+            "normal_bosses_killed": 8,
+            "heroic_bosses_killed": 8,
+            "mythic_bosses_killed": 3
+        }
+    }
+}

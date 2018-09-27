@@ -1,0 +1,264 @@
+<div class="container">
+    <div class="main-content">
+      <div class="row">
+        <div class="col-md-8">
+        {{#if errData.news}} 
+        <div class="err-message">
+          {{!-- <img class="align-self-center mr-3 media-img" src="images/news-images/default-news.png" alt="Error Image"> --}}
+          <div class="err-message-body">
+            {{errData.news}}
+          </div>
+        </div>
+        {{else}}
+        {{#each viewData.news}}
+        <div class="media">
+          <img class="align-self-center mr-3 media-img" src="images/news-images/default-news.png" alt="Default Image">
+          <div class="media-body">
+            <h4 class="mt-0">{{title}}&nbsp;<span class="badge badge-secondary">New</span>by <u>{{author}}</u></h4>
+            <p>
+            {{content}}
+            </p>
+          </div>
+        </div> 
+        {{/each}}
+        {{/if}}
+      </div>
+      <div class="col-md-4">
+        <nav class="nav nav-tabs" id="myTab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-recruitment-tab" data-toggle="tab" href="#nav-recruitment" role="tab" aria-controls="nav-recruitment" aria-selected="true">Recruitment</a>
+          <a class="nav-item nav-link" id="nav-guild-rank-tab" data-toggle="tab" href="#nav-guild-rank" role="tab" aria-controls="nav-guild-rank" aria-selected="false">Guild Rank</a>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-recruitment" role="tabpanel" aria-labelledby="nav-recruitment-tab">
+            <div class="card bg-grey mb-3">          
+              <div class="card-body">
+                {{!-- Set One --}}
+                <div class="row">
+                  {{#each viewData.recruitment.class}}
+              	  <div class="col-md-6">          
+                    <div class="row">
+                    	<div class="col-md-3">
+                    	  <img class="icon-border class-{{id}} main-spec-icon" src="images/class-icons/{{id}}.jpg">
+                    	</div>
+                    	<div class="col-md-9">
+                        <div class="spec-img-container">
+                      {{#ifCheck recruiting "true"}}
+                        {{#each spec}}
+                          {{#ifCheck this "true"}}
+                            <img class="icon-border class-{{../id}} spec-icon" src="images/spec-icons/{{#removeSpace @key}}{{/removeSpace}}-{{../id}}.png" title="{{@key}}" alt="{{@key}}">
+                          {{/ifCheck}}  
+                        {{/each}}
+                      {{else}}
+                      CLOSED
+                      {{/ifCheck}}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {{/each}}
+                {{!-- Set Two --}}
+                <div class="col-md-6">
+                
+
+                 </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#addictionAppModal">Apply</button>
+            </div>
+          </div>
+          </div>
+         <div class="tab-pane fade" id="nav-guild-rank" role="tabpanel" aria-labelledby="nav-guild-rank-tab">
+         <div class="card bg-grey mb-3">
+            <div class="card-body">
+                <h4 class="text-center card-title">Realm {{viewData.ranks.realm_rank}}</h4><hr>
+                <h4 class="text-center card-title">US {{viewData.ranks.area_rank}}</h4><hr>
+                <h4 class="text-center card-title">World {{viewData.ranks.world_rank}}</h4>
+            </div>
+          </div>
+         </div>
+         </div>
+
+          <div id="accordion" role="tablist">
+            <div class="card bg-grey mb-3">
+              {{#each viewData.progression.raid_progression}}
+                {{#if @first}}
+                <div class="card bg-transparent">
+                  <div class="card-header {{@key}}" role="tab" id="headingOne">
+                    <h6 class="mb-0">
+                      <a class="collapsed white-link" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <div class="row">
+                          <div class="col-md-7">
+                            {{#formatRaid @key}}{{/formatRaid}}
+                          </div>
+                          <div class="col-md-5">
+                            <div class="progress" style="height: 20px;">
+                              <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+                              <div class="progress-bar-title">{{summary}}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </h6>
+                  </div>
+                </div>
+                {{else}}
+                <div class="card-header {{@key}}" role="tab" id="headingFour">
+                  <h7 class="mb-0">
+                    <div class="row">
+                      <div class="col-md-6">{{#formatRaid @key}}{{/formatRaid}}</div>
+                      <div class="col-md-3"></div>
+                      <div class="col-md-3">
+                        <div class="progress" style="height: 20px;">
+                          <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+                          <div class="progress-bar-title">{{summary}}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </h7>
+                </div>
+                {{/if}}
+              {{/each}}
+            </div>
+          </div>
+    
+          
+          <div class="modal fade bd-example-modal-lg" id="addictionAppModal" tabindex="-1" role="dialog" aria-labelledby="addictionAppLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="addictionAppLabel">Addiction Application</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">x</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form method="post" action="/submit-app">
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputFirstName">First Name</label>
+                        <input type="text" class="form-control" name="inputFirstName" id="inputFirstName" placeholder="First Name">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputLastName">Last Name</label>
+                        <input type="text" class="form-control" name="inputLastName" id="inputLastName" placeholder="Last Name">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-2">
+                        <label for="inputAge">Age</label>
+                        <input type="number" class="form-control" name="inputAge" id="inputAge" placeholder="18">
+                      </div>
+                      <div class="form-group col-md-5">
+                        <label for="inputCity">Location</label>
+                        <input type="text" class="form-control" name="inputCity" id="inputCity" placeholder="City">
+                      </div>
+                      <div class="form-group col-md-5">
+                        <label for="inputState">&nbsp;</label>
+                        <input type="text" class="form-control" name="inputState" id="inputState" placeholder="State/Province">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputEmail">Email address</label>
+                        <div class="input-group mb-2 mb-sm-0">
+                          <div class="input-group-addon">@</div>
+                          <input type="email" class="form-control" name="inputEmail" id="inputEmail" aria-describedby="emailHelp" placeholder="example@domain.com">
+                        </div>
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputBattleTag">Battle Tag</label>
+                        <input type="text" class="form-control" name="inputBattleTag" id="inputBattleTag" placeholder="BattleTag#1234">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="classSelect">Class</label>
+                        <select class="form-control" name="classSelect" id="classSelect">
+                          <option selected>Select Class</option>
+                          <option value="Warrior">Warrior</option>
+                          <option value="Paladin">Paladin</option>
+                          <option value="Hunter">Hunter</option>
+                          <option value="Rogue">Rogue</option>
+                          <option value="Priest">Priest</option>
+                          <option value="Death Knight">Death Knight</option>
+                          <option value="Shaman">Shaman</option>
+                          <option value="Mage">Mage</option>
+                          <option value="Warlock">Warlock</option>
+                          <option value="Monk">Monk</option>
+                          <option value="Priest">Priest</option>
+                          <option value="Druid">Druid</option>
+                          <option value="Demon Hunter">Demon Hunter</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputSpec">Spec</label>
+                        <input type="text" class="form-control" name="inputSpec" id="inputSpec" placeholder="Main Spec">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputArmoryLink">Armory Link</label>
+                      <input type="text" class="form-control" name="inputArmoryLink" id="inputArmoryLink" placeholder="us.battle.net/wow/guild/bleeding-hollow/Addiction/">
+                    </div>
+                    <div class="form-group">
+                      <label for="inputTimePlayed">Time Played</label>
+                      <input type="text" class="form-control" name="inputTimePlayed" id="inputTimePlayed" placeholder="Days played on any and all of your characters that you ever raided on as a main.">
+                    </div>
+                    <div class="form-group">
+                      <label for="altsTextArea">Alt Information</label>
+                      <textarea class="form-control" name="altsTextArea" id="altsTextArea" rows="2" placeholder="Provide armory links to any alts that would assist our raid team. Remmember: 1 Alt is mandatory."></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="scheduleTextArea">Schedule</label>
+                      <textarea class="form-control" name="scheduleTextArea" id="scheduleTextArea" rows="3" placeholder="Are there any days / times you are consistently going to be unavailable? Your work / school / daily schedule are important here. What time you need to go to bed is also important. Will this availability change in the near future?"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="uiTextArea">UI and Keybinds</label>
+                      <textarea class="form-control" name="uiTextArea" id="uiTextArea" rows="3" placeholder="Please provide a screenshot of your UI (preferably in raid and combat). List a description of your keybinds as well; any pertaining to PVE execution. Use the largest resolution for your screenshot; we need to see everything clearly."></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputLogs">Logs</label>
+                      <input type="text" class="form-control" name="inputLogs" id="inputLogs" placeholder="https://www.warcraftlogs.com/guilds/471">
+                    </div>  
+                    <div class="form-group">
+                      <label for="raidexpTextArea">Raiding Experience</label>
+                      <textarea class="form-control" name="raidexpTextArea" id="raidexpTextArea" rows="2" placeholder="List all and any raid experience. Explain different roles you've filled throughout your career. Be thorough here."></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputReference">References</label>
+                      <input type="text" class="form-control" name="inputReference" id="inputReference" placeholder="Anyone in Addiction that can vouch for you or any other players who can tell us about you?">
+                    </div> 
+                    <div class="form-group">
+                      <label for="previousGuildsTextArea">Previous Guilds</label>
+                      <textarea class="form-control" name="previousGuildsTextArea" id="previousGuildsTextArea" rows="3" placeholder="Oldest to newest in that order. What is the reason or story for leaving your current guild? If you have ever held any leadership positions or responsibility please list that as well."></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="reasonsTextArea">Reasons for Playing</label>
+                      <textarea class="form-control" name="reasonsTextArea" id="reasonsTextArea" rows="2" placeholder="What interests you about WoW, and raiding more specifically?"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="hearAboutUsTextArea">How did you hear about us?</label>
+                      <textarea class="form-control" name="hearAboutUsTextArea" id="hearAboutUsTextArea" rows="2" placeholder="How did you hear about Addiction, and why do you want to join us over another guild?"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="specialTextArea">Why should we take you?</label>
+                      <textarea class="form-control" name="specialTextArea" id="specialTextArea" rows="2" placeholder="Why should we take you over someone else? What makes you special or worth the time?"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="">Favorite Color</label>
+                      <input type="text" class="form-control" name="inputColor" id="inputColor" placeholder="Green, Blue, Purple, ect. - Choose wisely.">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <input type="submit" class="btn btn-primary" name="submit" value="Submit Application">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>            
+      </div>
+    </div>
+  </div>     

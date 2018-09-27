@@ -1,0 +1,175 @@
+<div class="container">
+	<div class="main-content">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="list-group" id="list-tab" role="tablist">
+					 <a class="list-group-item list-group-item-action active" id="list-about-list" data-toggle="list" href="#list-pricing" role="tab" aria-controls="home">Pricing</a>
+				     <a class="list-group-item list-group-item-action" id="list-raiders-list" data-toggle="list" href="#list-info" role="tab" aria-controls="profile">Info</a>
+				     <a class="list-group-item list-group-item-action" id="list-expectations-list" data-toggle="list" href="#list-qa" role="tab" aria-controls="settings">Q&amp;A</a>
+				     <a class="list-group-item list-group-item-action" id="list-contact-list" data-toggle="list" href="#list-contact" role="tab" aria-controls="contact">Contact Us</a>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<div class="tab-content" id="nav-tabContent">
+					<div class="tab-pane fade show active" id="list-pricing" role="tabpanel" aria-labelledby="list-about-list">
+						<h5>Legion Pricing</h5>
+
+
+
+   <h6>Raids</h6>
+   <div class="row">
+    {{#groupRow 3 items}}
+    {{#each this}}
+		{{#ifCheck category "Raids"}}	
+        <div class="col-md-4">
+        <div class="card text-white bg-dark mb-3">
+        <img class="card-img-top" src="/images/sales-images/achievement.jpg" alt="Card image cap">
+        <div class="card-body">{{category}}
+        <h5 class="card-title">{{name}}</h5>
+        <p class="card-text">{{description}}</p>
+        <a href="#" class="btn btn-primary float-right"><img src="/images/coins.png">{{#numberFormat price}}{{/numberFormat}}</a>
+        </div>
+        </div>
+        </div>
+		{{/ifCheck}}
+    {{/each}}
+    {{/groupRow}}
+    </div>
+
+   <h6>Dungeons</h6>
+   <div class="row">
+    {{#groupRow 3 items}}
+    {{#each this}}
+		{{#ifCheck category "Dungeons"}}	
+        <div class="col-md-4">
+        <div class="card text-white bg-dark mb-3">
+        <img class="card-img-top" src="/images/sales-images/achievement.jpg" alt="Card image cap">
+        <div class="card-body">{{category}}
+        <h5 class="card-title">{{name}}</h5>
+        <p class="card-text">{{description}}</p>
+        <a href="#" class="btn btn-primary float-right"><img src="/images/coins.png">{{#numberFormat price}}{{/numberFormat}}</a>
+        </div>
+        </div>
+        </div>
+		{{/ifCheck}}
+    {{/each}}
+    {{/groupRow}}
+    </div>
+
+   <h6>Achievements</h6>
+   <div class="row">
+    {{#groupRow 3 items}}
+    {{#each this}}
+		{{#ifCheck category "Achievements"}}	
+        <div class="col-md-4">
+        <div class="card text-white bg-dark mb-3">
+        <img class="card-img-top" src="/images/sales-images/achievement.jpg" alt="Card image cap">
+        <div class="card-body">{{category}}
+        <h5 class="card-title">{{name}}</h5>
+        <p class="card-text">{{description}}</p>
+        <a href="#" class="btn btn-primary float-right"><img src="/images/coins.png">{{#numberFormat price}}{{/numberFormat}}</a>
+        </div>
+        </div>
+        </div>
+		{{/ifCheck}}
+    {{/each}}
+    {{/groupRow}}
+    </div>
+
+						<p>
+						Individual Bosses - Inquire through email <br/>
+						You will need to contact us about the meta mount achievements.<br/>
+						If there is anything else you wish to purchase just ask us, we can accommodate.<br/>
+						Email if you have questions: addictionsales1@gmail.com</p>
+						<hr class="line">
+					</div>
+
+					<div class="tab-pane fade" id="list-info" role="tabpanel" aria-labelledby="list-raiders-list">
+                        <h5>Sales</h5>
+						<ul>
+							<li>Have you always wanted that rare title but your raid group or guild can't get it?</li>
+							<li>Would you love to ride around on your very own rare end game mount?</li>
+							<li>Do you want to be the slayer of dragons?</li>
+							<li>Are you an achievement nerd but just don't have the motivated group?</li>
+							<li>Some shiny purples calling your name and you just can't get them?</li>
+						</ul>
+
+						<p>Well now is your chance, Addiction sells all of these things in the game. We also sell a variety of other runs, achievements, mounts, and items. Below is a list of all of those multiple things. The best way to start the process is to send an email to addictionsales1@gmail.com or contact an officer in game. We will set up a time and place for you to be on and ready to go. Have the payment ready, and online at the time slot you were allotted. Payment will be expected in full before we complete whatever it is you are buying. There are no questions at all about this policy.</p>
+						<hr class="line">		
+					</div>
+
+					<div class="tab-pane fade" id="list-qa" role="tabpanel" aria-labelledby="list-expectations-list">
+						
+					<h5>Q&amp;A</h5>
+
+					<ul class="list-unstyled">
+						<li>Q1. Do you accept server transfer buyers?</li> 
+						<li>A1. Yes we welcome server transfer buyers. Just send an email to addictionsales1@gmail.com to schedule your run or ask any questions</li><br/>
+
+						<li>Q2. What is the best way to get all of this started or to get a sale?</li>
+						<li>A2. Contact a member of the guild, preferably Saraf or another officer in game. Email addictionsales1@gmail.com works as well. We never do a sales run or reserve a spot unless at least half the gold is submitted and we have a confirmation by email for the date and time.</li><br/>
+
+						<li>Q3. I really don't like giving you my gold before I get my stuff, what if you ninja it and kick me!?</li>
+						<li>A3. That concern is completely understandable. But we also would be uncomfortable killing the boss you want or giving you the item and you left without paying us. You are in the position to have to trust us to deliver on our promise. The GM's would also intervene if we broke the deal, so rest assured. We have a very positive track record of making people happy so don't worry :)</li><br/>
+
+						<li>Q4. Some other guild is selling what you are for cheaper, do you price match?</li>
+						<li>A4. This is not walmart, we will not match competitor's prices. If they are cheaper why are you looking at us to buy from? The answer is because we will deliver it better than they will. They may not kill the boss as quickly or easily. They also probably don't have the reputation for great sales as we do.</li><br/>
+
+						<li>Q5. What if there is something I want that you don't have listed?</li>
+						<li>A5. Just ask us and I'm sure we can accomodate you, we are always open to selling new things. These are just the things the masses want normally.</li><br/>
+
+						<li>Q6. What if I cannot show up for the time that I was scheduled?</li>
+						<li>A6. We need at least 24 hour notice to your time, or else I will have wasted all of the time for the people involved, and they won't be happy about that. If you don't give us notice and flake, we will be inclined not to help you anymore. The deposit we take for the run will also be forfeited if you do not have a very good reason for not showing up. If there is a good reason we will reschedule in most instances.</li><br/>
+
+						<li>Q7. So how does pricing work if I am buying things individually? ex. I only need loot off 1 boss and don't want a full run.</li>
+						<li>A7. You would need to talk to us about pricing for the boss kill, then IF your loot drops you would pay to get it.</li><br/> 
+
+						<li>Q8. Do you bring other buyers in and would they compete against me for my gear?</li> 
+						<li>A8. We do bring multiple buyers sometimes but they will not be competing for your gear. In other words we would bring a plate DPS and a caster DPS, so there would be no issues. Guildies get warforged and socketed gear if we need it.</li><br/>
+
+						<li>Q9. Why should I purchase the package deal instead of individually?</li> 
+						<li>A9. The package deal has discounts built in for buying the whole run. You could get lucky and get 10+ pieces of loot which would be a lot cheaper than paying for the loot individually.</li><br/> 
+
+						<li>Q10. Why am I getting charged just to be brought in for the boss and it be killed?</li>
+						<li>A10. The price per boss is like the entrace fee and you still get the chance to bonus roll bosses. It is basically paying us for our time and energy to bring you.</li><br/>
+
+						<li>Q11. Do you offer a refer a friend discount or repeat customer discount?</li>
+						<li>A11. Yes we give a 10% discount that can be applied to 1 friend or 1 person on the next repeat purchase.</li>
+					</ul>
+					<hr class="line">
+					</div>
+
+					<div class="tab-pane fade" id="list-contact" role="tabpanel" aria-labelledby="list-contact-list">
+						<h5>Contact Us</h5>
+                        <hr class="line">
+						<form name="application" method="post" action="/sales">
+							<div class="form-row">		        		                  
+			                    <div class="form-group col-md-6">
+			                        <label for="inputSpec">Username</label>
+			                        <input type="text" class="form-control" name="username" id="username" placeholder="Username">
+			                    </div>
+			                    <div class="form-group col-md-6">
+			                        <label for="inputSpec">Email / Battletag</label>
+			                        <input type="text" class="form-control" name="email" id="email" placeholder="email@email.com / Battletag#1234">
+			                    </div>
+			                </div>
+			                <div class="form-group">
+			                  	<label for="raidexpTextArea">Message</label>
+			                    <textarea class="form-control" name="message" id="message" rows="4" placeholder="Please insert your message here."></textarea>
+			                </div>  
+                            <button type="submit" class="btn btn-primary float-right">Submit</button>                  
+		                </form>	
+		                <hr class="line">
+					</div>
+
+					<blockquote class="blockquote">
+						<p class="mb-0">Thank you and looking forward to all the potential meetings!</p>
+						<footer class="blockquote-footer">Addiction Guild Leadership</footer>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+ 
+			

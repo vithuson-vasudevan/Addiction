@@ -1,0 +1,37 @@
+{{#if err}}
+<div class="alert alert-danger" role="alert">
+  {{err}}
+</div>
+{{/if}}
+<h4>Add Sales Item</h4>
+<form method="post">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Argus Mount">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="description">Description</label>
+      <input type="text" class="form-control" id="description" name="description" placeholder="The mount dropped from Argus.">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="number" class="form-control" id="price" name="price" placeholder="500000">
+  </div>
+  <div class="form-group">
+    <label for="imagePath">Image</label>
+    <input type="text" class="form-control" id="imagePath" name="imagePath" placeholder="/images/argus-mount.png">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="category">Category</label>
+      <select id="category" name="category" class="form-control">
+        <option selected>Achievements</option>
+        <option>Dungeons</option>
+        <option>Raids</option>
+      </select>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="main-content">  
+    <div class="row"> 
+        {{#groupRow 3 streams}}
+        {{#each this}}
+            <div class="col-md-3">
+                <div class="streamer-info">{{streamer}}</div>
+                <iframe src="https://player.twitch.tv/?channel={{streamer}}" width="275" height="150" frameborder="1" scrolling="no" allowfullscreen="true"></iframe>
+            </div>
+        {{/each}}
+        {{/groupRow}}
+    </div>
+  </div>
+</div>

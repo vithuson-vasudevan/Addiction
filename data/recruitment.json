@@ -1,0 +1,124 @@
+{
+    "class": [
+        {
+            "id": "1",
+            "name": "Warrior",
+            "recruiting": "false",
+            "spec": {
+                "Arms": "true",
+                "Fury": "false",
+                "Protection": "false"
+            }
+        },
+        {
+            "id": "2",
+            "name": "Paladin",
+            "recruiting": "true",
+            "spec": {
+                "Holy": "true",
+                "Protection": "false",
+                "Retribution": "false"
+            }
+        },
+        {
+            "id": "3",
+            "name": "Hunter",
+            "recruiting": "true",
+            "spec": {
+                "Beast Mastery": "true",
+                "Marksmanship": "true",
+                "Survival": "true"
+            }
+        },
+        {
+            "id": "4",
+            "name": "Rogue",
+            "recruiting": "true",
+            "spec": {
+                "Assassination": "true",
+                "Outlaw": "true",
+                "Subtlety": "true"
+            }
+        },
+        {
+            "id": "5",
+            "name": "Priest",
+            "recruiting": "true",
+            "spec": {
+                "Discipline": "true",
+                "Holy": "true",
+                "Shadow": "true"
+            }
+        },
+        {
+            "id": "6",
+            "name": "Death Knight",
+            "recruiting": "true",
+            "spec": {
+                "Blood": "false",
+                "Frost": "true",
+                "Unholy": "false"
+            }
+        },
+        {
+            "id": "7",
+            "name": "Shaman",
+            "recruiting": "true",
+            "spec": {
+                "Elemental": "false",
+                "Enhancement": "false",
+                "Restoration": "true"
+            }
+        },
+        {
+            "id": "8",
+            "name": "Mage",
+            "recruiting": "true",
+            "spec": {
+                "Arcane": "true",
+                "Frost": "true",
+                "Fire": "true"
+            }
+        },
+        {
+            "id": "9",
+            "name": "Warlock",
+            "recruiting": "true",
+            "spec": {
+                "Affliction": "true",
+                "Demonology": "true",
+                "Destruction": "true"
+            }
+        },
+        {
+            "id": "10",
+            "name": "Monk",
+            "recruiting": "true",
+            "spec": {
+                "Brewmaster": "false",
+                "Mistweaver": "true",
+                "Windwalker": "true"
+            }
+        },
+        {
+            "id": "11",
+            "name": "Druid",
+            "recruiting": "true",
+            "spec": {
+                "Balance": "true",
+                "Feral": "false",
+                "Guardian": "false",
+                "Restoration": "true"
+            }
+        },
+        {
+            "id": "12",
+            "name": "Demon Hunter",
+            "recruiting": "false",
+            "spec": {
+                "Havoc": "true",
+                "Vengeance": "true"
+            }
+        }
+    ]
+}
